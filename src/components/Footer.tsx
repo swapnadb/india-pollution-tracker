@@ -24,8 +24,8 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-3">Contact</h3>
-            <p className="text-sm text-gray-600 mb-2">Email: info@indiapollutiontracker.org</p>
-            <p className="text-sm text-gray-600 mb-2">Phone: +91 123 456 7890</p>
+            <p className="text-sm text-gray-600 mb-2">Email: kamsaliswapna@gmail.com</p>
+            <p className="text-sm text-gray-600 mb-2">Phone: +91 8431723067</p>
             <div className="flex space-x-4 mt-3">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-600">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

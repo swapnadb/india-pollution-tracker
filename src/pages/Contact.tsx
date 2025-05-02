@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                   </svg>
                   <div>
                     <p className="font-medium text-gray-800">Email</p>
-                    <a href="mailto:info@indiapollutiontracker.org" className="text-teal-600 hover:underline">info@indiapollutiontracker.org</a>
+                    <a href="mailto:kamsaliswapna@gmail.com" className="text-teal-600 hover:underline">kamsaliswapna@gmail.com</a>
                   </div>
                 </div>
                 
@@ -123,7 +123,7 @@ const Contact: React.FC = () => {
                   </svg>
                   <div>
                     <p className="font-medium text-gray-800">Phone</p>
-                    <p className="text-gray-600">+91 123 456 7890</p>
+                    <p className="text-gray-600">+91 8431723067</p>
                   </div>
                 </div>
                 
