@@ -45,9 +45,10 @@ const StateDetails: React.FC<StateDetailsProps> = ({ state }) => {
       <div>
         <h3 className="text-lg font-semibold mb-4">Pollutant Levels</h3>
         <div className="space-y-4">
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-medium">PM2.5</span>
-            <div className="flex-1 mx-4">
+          {/* Standardized grid layout for all pollutants */}
+          <div className="grid grid-cols-12 items-center gap-2">
+            <span className="text-sm font-medium col-span-2">PM2.5</span>
+            <div className="col-span-7">
               <div className="w-full bg-gray-200 rounded-full h-1.5">
                 <div 
                   className="bg-blue-500 h-1.5 rounded-full" 
@@ -55,12 +56,12 @@ const StateDetails: React.FC<StateDetailsProps> = ({ state }) => {
                 ></div>
               </div>
             </div>
-            <span className="text-sm font-semibold">{state.pollutants.pm25} μg/m³</span>
+            <span className="text-sm font-semibold col-span-3 text-right">{state.pollutants.pm25} μg/m³</span>
           </div>
           
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-medium">PM10</span>
-            <div className="flex-1 mx-4">
+          <div className="grid grid-cols-12 items-center gap-2">
+            <span className="text-sm font-medium col-span-2">PM10</span>
+            <div className="col-span-7">
               <div className="w-full bg-gray-200 rounded-full h-1.5">
                 <div 
                   className="bg-blue-500 h-1.5 rounded-full" 
@@ -68,12 +69,12 @@ const StateDetails: React.FC<StateDetailsProps> = ({ state }) => {
                 ></div>
               </div>
             </div>
-            <span className="text-sm font-semibold">{state.pollutants.pm10} μg/m³</span>
+            <span className="text-sm font-semibold col-span-3 text-right">{state.pollutants.pm10} μg/m³</span>
           </div>
           
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-medium">SO₂</span>
-            <div className="flex-1 mx-4">
+          <div className="grid grid-cols-12 items-center gap-2">
+            <span className="text-sm font-medium col-span-2">SO₂</span>
+            <div className="col-span-7">
               <div className="w-full bg-gray-200 rounded-full h-1.5">
                 <div 
                   className="bg-blue-500 h-1.5 rounded-full" 
@@ -81,12 +82,12 @@ const StateDetails: React.FC<StateDetailsProps> = ({ state }) => {
                 ></div>
               </div>
             </div>
-            <span className="text-sm font-semibold">{state.pollutants.so2} μg/m³</span>
+            <span className="text-sm font-semibold col-span-3 text-right">{state.pollutants.so2} μg/m³</span>
           </div>
           
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-medium">NO₂</span>
-            <div className="flex-1 mx-4">
+          <div className="grid grid-cols-12 items-center gap-2">
+            <span className="text-sm font-medium col-span-2">NO₂</span>
+            <div className="col-span-7">
               <div className="w-full bg-gray-200 rounded-full h-1.5">
                 <div 
                   className="bg-blue-500 h-1.5 rounded-full" 
@@ -94,12 +95,12 @@ const StateDetails: React.FC<StateDetailsProps> = ({ state }) => {
                 ></div>
               </div>
             </div>
-            <span className="text-sm font-semibold">{state.pollutants.no2} μg/m³</span>
+            <span className="text-sm font-semibold col-span-3 text-right">{state.pollutants.no2} μg/m³</span>
           </div>
           
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-medium">O₃</span>
-            <div className="flex-1 mx-4">
+          <div className="grid grid-cols-12 items-center gap-2">
+            <span className="text-sm font-medium col-span-2">O₃</span>
+            <div className="col-span-7">
               <div className="w-full bg-gray-200 rounded-full h-1.5">
                 <div 
                   className="bg-blue-500 h-1.5 rounded-full" 
@@ -107,12 +108,12 @@ const StateDetails: React.FC<StateDetailsProps> = ({ state }) => {
                 ></div>
               </div>
             </div>
-            <span className="text-sm font-semibold">{state.pollutants.o3} μg/m³</span>
+            <span className="text-sm font-semibold col-span-3 text-right">{state.pollutants.o3} μg/m³</span>
           </div>
           
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-medium">CO</span>
-            <div className="flex-1 mx-4">
+          <div className="grid grid-cols-12 items-center gap-2">
+            <span className="text-sm font-medium col-span-2">CO</span>
+            <div className="col-span-7">
               <div className="w-full bg-gray-200 rounded-full h-1.5">
                 <div 
                   className="bg-blue-500 h-1.5 rounded-full" 
@@ -120,7 +121,7 @@ const StateDetails: React.FC<StateDetailsProps> = ({ state }) => {
                 ></div>
               </div>
             </div>
-            <span className="text-sm font-semibold">{state.pollutants.co} mg/m³</span>
+            <span className="text-sm font-semibold col-span-3 text-right">{state.pollutants.co} mg/m³</span>
           </div>
         </div>
       </div>

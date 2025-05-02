@@ -38,7 +38,7 @@ const Index: React.FC = () => {
           />
         </div>
         
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row gap-6 mb-10">
           <div className="w-full md:w-2/3">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
               {filteredStates.map(state => (
@@ -57,9 +57,15 @@ const Index: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-          <AqiLegend />
-          <PollutantsInfo />
-          <HealthImpacts />
+          <div className="h-full">
+            <AqiLegend />
+          </div>
+          <div className="h-full">
+            <PollutantsInfo />
+          </div>
+          <div className="h-full">
+            <HealthImpacts />
+          </div>
         </div>
         
         <div className="bg-white p-6 rounded-lg shadow-sm mt-6">

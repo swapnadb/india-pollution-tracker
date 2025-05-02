@@ -4,7 +4,7 @@ import { pollutantInfo } from '@/lib/constants';
 
 const PollutantsInfo: React.FC = () => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm">
+    <div className="bg-white p-6 rounded-lg shadow-sm h-full">
       <h3 className="text-lg font-semibold mb-4">About the Parameters</h3>
       <div className="space-y-3">
         {pollutantInfo.map((pollutant) => (
