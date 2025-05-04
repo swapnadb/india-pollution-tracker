@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const About: React.FC = () => {
   return (
@@ -10,6 +11,19 @@ const About: React.FC = () => {
       
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">About</h1>
+        
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>About the Tracker</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              India Pollution Tracker provides real-time air quality data across Indian states and territories. 
+              Our mission is to raise awareness about pollution levels and promote healthier environments. 
+              The data is updated regularly to ensure accuracy and relevance.
+            </p>
+          </CardContent>
+        </Card>
         
         <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
           <div className="flex flex-col md:flex-row">
@@ -41,7 +55,7 @@ const About: React.FC = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <a href="mailto:kamsaliswapna@gmail.com" className="text-teal-600 hover:underline">kamsaliswapna@gmail.com</a>
+                  <a href="mailto:kamsaliswapna9@gmail.com" className="text-teal-600 hover:underline">kamsaliswapna9@gmail.com</a>
                 </div>
                 
                 <div className="flex items-center">

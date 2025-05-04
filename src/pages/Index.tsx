@@ -151,15 +151,6 @@ const Index: React.FC = () => {
             <HealthImpacts />
           </div>
         </div>
-        
-        <div className="bg-white p-6 rounded-lg shadow-sm mt-6">
-          <h3 className="text-lg font-semibold mb-2">About the Tracker</h3>
-          <p className="text-sm text-gray-600">
-            India Pollution Tracker provides real-time air quality data across Indian states and territories. 
-            Our mission is to raise awareness about pollution levels and promote healthier environments. 
-            The data is updated regularly to ensure accuracy and relevance.
-          </p>
-        </div>
       </main>
       
       <Footer />
