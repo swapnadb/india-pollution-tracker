@@ -1,13 +1,81 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    reason: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Open Google Form in a new tab
-    window.open('https://forms.gle/YourGoogleFormLink', '_blank');
+    setIsSubmitting(true);
+    
+    // Replace these with your actual Google Form entry IDs
+    const formId = 'YOUR_GOOGLE_FORM_ID';
+    const nameId = 'entry.XXXXXXXX';
+    const emailId = 'entry.XXXXXXXX';
+    const phoneId = 'entry.XXXXXXXX';
+    const reasonId = 'entry.XXXXXXXX';
+    const messageId = 'entry.XXXXXXXX';
+    
+    // Construct the form data in the format Google Forms expects
+    const formEntries = new URLSearchParams();
+    formEntries.append(nameId, formData.name);
+    formEntries.append(emailId, formData.email);
+    if (formData.phone) formEntries.append(phoneId, formData.phone);
+    formEntries.append(reasonId, formData.reason);
+    formEntries.append(messageId, formData.message);
+    
+    try {
+      // Send the form data to Google Forms
+      const response = await fetch(`https://docs.google.com/forms/d/e/${formId}/formResponse`, {
+        method: 'POST',
+        mode: 'no-cors', // This is important as Google Forms doesn't allow CORS
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formEntries.toString(),
+      });
+      
+      // Since we're using no-cors, we won't get a proper response status
+      // So we'll just assume it worked if there's no error
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. We'll get back to you soon.",
+      });
+      
+      // Reset the form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        reason: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -32,6 +100,8 @@ const Contact: React.FC = () => {
                   id="name"
                   name="name"
                   required
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   placeholder="Your name"
                 />
@@ -44,6 +114,8 @@ const Contact: React.FC = () => {
                   id="email"
                   name="email"
                   required
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   placeholder="Your email address"
                 />
@@ -55,6 +127,8 @@ const Contact: React.FC = () => {
                   type="tel"
                   id="phone"
                   name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   placeholder="Your phone number"
                 />
@@ -66,6 +140,8 @@ const Contact: React.FC = () => {
                   id="reason"
                   name="reason"
                   required
+                  value={formData.reason}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 >
                   <option value="">Select a reason</option>
@@ -82,6 +158,8 @@ const Contact: React.FC = () => {
                   name="message"
                   rows={4}
                   required
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   placeholder="Write your message here..."
                 ></textarea>
@@ -90,14 +168,15 @@ const Contact: React.FC = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 transition-colors disabled:opacity-70"
                 >
-                  Submit
+                  {isSubmitting ? 'Sending...' : 'Submit'}
                 </button>
               </div>
               
               <p className="text-xs text-gray-500">
-                By submitting this form, you'll be redirected to our Google Form to complete your submission.
+                By submitting this form, you agree to our privacy policy and terms of service.
               </p>
             </form>
           </div>
@@ -178,3 +257,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
