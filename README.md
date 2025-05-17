@@ -1,73 +1,162 @@
-# Welcome to your Lovable project
+# 🇮🇳 India Air Pollution Tracker
 
-## Project info
+An interactive web application designed to visualize real-time air quality data (AQI) across Indian states. This tool aims to raise awareness about pollution levels and their health impacts by transforming complex environmental data into accessible visual dashboards.
 
-**URL**: https://lovable.dev/projects/24c4187b-9bde-468e-90de-02c46fdf0998
+---
 
-## How can I edit this code?
+## 👩‍💻 Project Author
 
-There are several ways of editing your application.
+**Kamsali Swapna**  
+Hello! I'm a student passionate about environmental data visualization and public health awareness.  
+This India Air Pollution Tracker is my MCA college mini-project aimed at providing transparent and user-friendly information about air quality across India.
 
-**Use Lovable**
+- 📞 +91 8431723067  
+- 📧 [kamsaliswapna9@gmail.com](mailto:kamsaliswapna9@gmail.com)  
+- 💻 [GitHub: swapnadb](https://github.com/swapnadb)  
+- 🔗 [LinkedIn: swapnadb](https://linkedin.com/in/swapnadb)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/24c4187b-9bde-468e-90de-02c46fdf0998) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🌐 Live Demo
 
-**Use your preferred IDE**
+You can access the deployed application here:  
+🔗 [https://lovable.dev/projects/24c4187b-9bde-468e-90de-02c46fdf0998](https://lovable.dev/projects/24c4187b-9bde-468e-90de-02c46fdf0998)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📌 Project Features
 
-Follow these steps:
+- 🔎 Search and filter Indian states by air quality
+- 📊 Real-time AQI values with color-coded indicators (Good to Hazardous)
+- 🧪 Pollutant breakdown (PM2.5, PM10, SO₂, NO₂, O₃, CO)
+- 🧠 Educational resources about pollutants and health effects
+- 🧭 Mobile-first responsive design
+- ⚡ Fast performance and smooth UI transitions
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠️ Technologies Used
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Frontend Framework**: React 18 + TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui, Radix UI
+- **Routing**: React Router DOM
+- **State & Form Management**: React Query, React Hook Form
+- **Data Visualization**: Recharts
+- **Icons & UI Elements**: Lucide React, Sonner
+- **Build Tool**: Vite
+- **Code Quality**: ESLint, Prettier
+- **Version Control**: Git, GitHub
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🏗️ Folder Structure
+
+```
+india-pollution-tracker/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── components/         # Reusable UI components
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # Utility constants & functions
+│   ├── pages/              # Page-level components
+│   ├── App.tsx             # Main application entry
+│   ├── main.tsx
+│   └── index.css
+├── tailwind.config.ts
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
+```
+
+---
+
+## 🧪 Development Setup
+
+To run this project locally:
+
+### 1. Clone the repository
+
+```bash
+git clone <YOUR_GIT_REPO_URL>
+cd india-pollution-tracker
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 4. Open in browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Visit: [http://localhost:5173](http://localhost:5173)
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Key Pages and Functionality
 
-## What technologies are used for this project?
+### 🏠 Home Dashboard
+- Interactive grid of Indian states with real-time AQI data
+- Color-coded indicators for easy understanding
+- Search and sorting functionality
 
-This project is built with:
+### 📋 State Details Panel
+- Individual pollutant readings with progress bars
+- Health risk category and suggestions
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 📘 Educational Resources
+- AQI legends and color code explanations
+- Information about common pollutants
+- Health tips for different AQI levels
 
-## How can I deploy this project?
+### 📄 About & Contact
+- Project background, developer details
+- Preventive measures for pollution exposure
 
-Simply open [Lovable](https://lovable.dev/projects/24c4187b-9bde-468e-90de-02c46fdf0998) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🧩 Future Enhancements
 
-Yes, you can!
+- 🔄 Integration with real-time AQI APIs
+- 📈 Historical data graphs and trends
+- 📍 Location-based air quality tracking
+- 👤 User accounts for personalized data views
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📚 References
+
+### Technical Documentation
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Vite](https://vitejs.dev/guide/)
+
+### Air Quality Resources
+- [WHO – Air Quality Guidelines](https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health)
+- [Central Pollution Control Board (India)](https://cpcb.nic.in/)
+- [AirNow – AQI Basics](https://www.airnow.gov/aqi/aqi-basics/)
+
+### Design & UX
+- [Material Design Accessibility](https://material.io/design/usability/accessibility.html)
+- [Nielsen Norman Group – Data Visualization](https://www.nngroup.com/articles/data-visualization-human-perception/)
+
+---
+
+## 🙏 Acknowledgments
+
+- Project Guide: **Dr. G. Babu**, Assistant Professor, SRM IST
+- Institution: **SRM Institute of Science and Technology**, Directorate of Online Education
+- Thanks to my peers, family, and mentors for constant encouragement
+
+---
+
+> “Good health starts with clean air. Let’s use technology to make it visible.”  
+> — *Kamsali Swapna*
